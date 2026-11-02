@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="36" viewBox="0 0 148 36" role="img" aria-label="Linkedin">
+  <defs><clipPath id="rounded"><rect width="148" height="36" rx="6" /></clipPath></defs>
+  <g clip-path="url(#rounded)">
+    <rect width="148" height="36" fill="#89b4fa" />
+    <rect width="40" height="36" fill="#181825" opacity="0.10" />
+  </g>
+  <g transform="translate(10 8) scale(0.83333333)"><path fill="#181825" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" /></g>
+  <text x="94" y="22.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#181825">LINKEDIN</text>
+</svg>
