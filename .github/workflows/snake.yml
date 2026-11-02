@@ -1,0 +1,52 @@
+name: Generate profile widgets
+
+on:
+  schedule:
+    - cron: "17 0 * * *" # daily, 00:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/snake.yml"
+      - "scripts/generate_languages.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-widgets
+  cancel-in-progress: true
+
+jobs:
+  widgets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Generate light and dark contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: Korinex
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=%23cba6f7&color_dots=%231e1e2e,%2345475a,%2374c7ec,%2389b4fa,%23a6e3a1
+            dist/snake-light.svg?palette=github-light&color_snake=%238839ef&color_dots=%23ebedf0,%23cceeff,%2374c7ec,%2389b4fa,%2340a02b
+
+      - name: Generate matching top-languages chart
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_USERNAME: Korinex
+          LANGUAGES_OUT: dist/languages.svg
+        run: python3 scripts/generate_languages.py
+
+      - name: Publish widgets to the output branch
+        uses: crazy-max/ghaction-github-pages@df5cc2bfa78282ded844b354faee141f06b41865 # v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+          allow_empty_commit: false
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
