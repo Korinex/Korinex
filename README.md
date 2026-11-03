@@ -176,7 +176,24 @@ I like learning by building, documenting what I learn, and being clear about wha
 I'm happy to connect about projects, collaboration, or learning together.
 
 ---
+<details>
+<summary>Design credits</summary>
 
+Profile design inspired by:
+
+- [codyandersan](https://github.com/codyandersan/codyandersan) — terminal-style header and overall visual direction.
+- [Fuad-Haque](https://github.com/Fuad-Haque/Fuad-Haque) — block-ASCII styling and animated typing introduction.
+- [muhammadadil0](https://github.com/muhammadadil0/muhammadadil0) — section organisation and tech-stack presentation.
+
+Widgets and tools:
+- [Readme Typing SVG](https://github.com/DenverCoder1/readme-typing-svg)
+- [GitHub Readme Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats)
+- [Contribution Snake](https://github.com/Platane/snk)
+- [Shields.io](https://shields.io)
+
+Colour palette: [Catppuccin Mocha](https://github.com/catppuccin/catppuccin).
+
+</details>
 <div align="center">
   <h3>“Stay curious. Build thoughtfully.”</h3>
   <p><samp>LEARN &nbsp;·&nbsp; BUILD &nbsp;·&nbsp; REFLECT &nbsp;·&nbsp; REPEAT</samp></p>
